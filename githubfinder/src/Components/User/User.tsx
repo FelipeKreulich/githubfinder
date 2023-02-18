@@ -3,7 +3,7 @@ import { MdLocationPin } from "react-icons/md"
 import { Link } from "react-router-dom"
 import styles from './User.module.css'
 
-const User = ({login, avatar_url, followers, following, location, bio}: UserProps) => {
+const User = ({login, avatar_url, followers, following, location, bio, repos_url}: UserProps) => {
   return (
     <div className={styles.user}>
       <img src={avatar_url} alt={login} />

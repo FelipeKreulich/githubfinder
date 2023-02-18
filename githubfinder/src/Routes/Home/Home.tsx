@@ -22,7 +22,7 @@ const Home = () => {
       return;
     }
 
-    const { avatar_url, login, location, followers, following, bio } = data
+    const { avatar_url, login, location, followers, following, bio, repos_url } = data
 
     const userData: UserProps = {
       avatar_url,
@@ -30,7 +30,8 @@ const Home = () => {
       location,
       followers,
       following,
-      bio
+      bio,
+      repos_url,
     }
 
     setUser(userData)
