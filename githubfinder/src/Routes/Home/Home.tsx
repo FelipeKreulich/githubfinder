@@ -1,3 +1,4 @@
+
 import { UserProps } from '../../Types/user'
 import Search from '../../Components/Search/Search'
 import User from '../../Components/User/User'
@@ -18,10 +19,10 @@ const Home = () => {
 
     if(res.status === 404) {
       setError(true)
-      return
+      return;
     }
 
-    const { avatar_url, login, location, followers, following } = data
+    const { avatar_url, login, location, followers, following, bio } = data
 
     const userData: UserProps = {
       avatar_url,
@@ -29,6 +30,7 @@ const Home = () => {
       location,
       followers,
       following,
+      bio
     }
 
     setUser(userData)
