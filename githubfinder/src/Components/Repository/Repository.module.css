@@ -40,3 +40,29 @@
 .container a:hover {
   opacity: 1;
 }
+
+.iconStar {
+  fill: #DAA520;
+}
+
+.iconFork {
+  fill: #00FF00;
+}
+
+.starcount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.forkcount {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.link {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
