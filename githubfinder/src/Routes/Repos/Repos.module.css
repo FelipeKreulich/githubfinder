@@ -4,6 +4,7 @@
   background: rgba(88, 33, 153, 0.52);
   padding: 0.7rem;
   border-radius: 10px;
+  flex-direction: column;
 }
 
 .container h2>span {
