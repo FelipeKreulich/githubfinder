@@ -9,7 +9,11 @@ const User = ({login, avatar_url, followers, following, location, bio, repos_url
       <img src={avatar_url} alt={login} />
       <h2>{login}</h2>
       <div className={styles.bio}>
-        <p>{bio}</p>
+        <p>
+          {
+            bio ? bio : "Bibliografia não encontrada!"
+          }
+        </p>
       </div>
       <p className={styles.location}>
         <MdLocationPin />

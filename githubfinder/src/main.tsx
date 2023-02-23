@@ -17,7 +17,7 @@ const router = createBrowserRouter([
         element: <Home />
       },
       {
-        path: `/repos/:login`,
+        path: `/repos/:username`,
         element: <Repos />
       }
     ]

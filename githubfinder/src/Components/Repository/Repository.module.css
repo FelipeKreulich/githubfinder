@@ -11,12 +11,17 @@
   border-radius: 10px;
   border: 1px solid rgba(255, 255, 255, 0.18);
   gap: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.container:first-child {
+  margin-top: 1rem;
 }
 
 .container h3 {
   display: flex;
   justify-content: center;
-  color: #646aff;
+  color: #4ed8c7;
 }
 
 .container p {
