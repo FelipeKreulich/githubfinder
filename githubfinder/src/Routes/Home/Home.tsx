@@ -1,4 +1,3 @@
-
 import { UserProps } from '../../Types/user'
 import Search from '../../Components/Search/Search'
 import User from '../../Components/User/User'
