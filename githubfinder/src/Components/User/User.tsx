@@ -4,7 +4,7 @@ import { Link } from "react-router-dom"
 import styles from './User.module.css'
 import { motion } from 'framer-motion'
 
-const User = ({login, avatar_url, followers, following, location, bio, repos_url}: UserProps) => {
+const User = ({login, avatar_url, followers, following, location, bio}: UserProps) => {
   return (
     <motion.div 
     initial={{ opacity: 0, scale: 0.5 }}
@@ -34,7 +34,7 @@ const User = ({login, avatar_url, followers, following, location, bio, repos_url
           <p className={styles.number}>{following}</p>
         </div>
       </div>
-      <Link to={`/repos/${login}`}>Ver melhores projetos!</Link>
+      <Link to={`/repos/${login}`}>Ver Top 5!</Link>
     </motion.div>
   )
 }

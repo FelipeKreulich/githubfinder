@@ -5,8 +5,36 @@ type SearchProps = {
 import { useState, KeyboardEvent } from 'react'
 import { BsSearch } from 'react-icons/bs';
 import styles from './Search.module.css'
+import { toast } from 'react-toastify'
+import 'react-toastify/dist/ReactToastify.css'
 
 const Search = ({loadUser}: SearchProps) => {
+
+  const success = () => {
+    toast.success("✅ Usuário Encontrado!",{
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    })
+  }
+
+  const failed = () => {
+    toast.error("❌ Usuário Não Encontrado!",{
+      position: "top-right",
+      autoClose: 5000,
+      hideProgressBar: false,
+      closeOnClick: true,
+      pauseOnHover: true,
+      draggable: true,
+      progress: undefined,
+      theme: "dark",
+    })
+  }
 
   const [userName, setuserName] = useState("")
 
@@ -15,6 +43,8 @@ const Search = ({loadUser}: SearchProps) => {
       loadUser(userName)
     }
   }
+
+  if (!userName) {}
 
   return (
     <div className={styles.search}>

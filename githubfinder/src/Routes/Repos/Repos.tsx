@@ -33,11 +33,7 @@ const Repos = () => {
   if (!repos && isLoading) return <Loader />
 
   return (
-    <motion.div 
-    initial={{ opacity: 0, scale: 0.5 }}
-    animate={{ opacity: 1, scale: 1 }}
-    transition={{ duration: 0.5 }}
-    className={styles.container}>
+    <motion.div className={styles.container}>
       <Backbutton />
       <h2>Veja os Repositórios de <span>{username}</span></h2>
       {repos && repos.length === 0 && <p>Não há repositórios.</p>}
