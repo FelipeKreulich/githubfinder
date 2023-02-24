@@ -1,7 +1,6 @@
 import { Outlet } from 'react-router-dom'
 import styles from './App.module.css'
 import { motion } from 'framer-motion'
-import Toast from './Components/Toast/Toast'
 
 function App() {
   return (
