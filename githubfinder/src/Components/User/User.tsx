@@ -2,10 +2,15 @@ import { UserProps } from "../../Types/user"
 import { MdLocationPin } from "react-icons/md"
 import { Link } from "react-router-dom"
 import styles from './User.module.css'
+import { motion } from 'framer-motion'
 
 const User = ({login, avatar_url, followers, following, location, bio, repos_url}: UserProps) => {
   return (
-    <div className={styles.user}>
+    <motion.div 
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
+    className={styles.user}>
       <img src={avatar_url} alt={login} />
       <h2>{login}</h2>
       <div className={styles.bio}>
@@ -30,7 +35,7 @@ const User = ({login, avatar_url, followers, following, location, bio, repos_url
         </div>
       </div>
       <Link to={`/repos/${login}`}>Ver melhores projetos!</Link>
-    </div>
+    </motion.div>
   )
 }
 

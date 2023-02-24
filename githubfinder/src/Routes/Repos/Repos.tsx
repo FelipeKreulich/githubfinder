@@ -5,6 +5,7 @@ import { RepoProps } from "../../Types/reposit"
 import styles from '../Repos/Repos.module.css'
 import Backbutton from "../../Components/BackButton/Backbutton"
 import Loader from "../../Components/Loader/Loader"
+import { motion } from 'framer-motion'
 
 const Repos = () => {
 
@@ -32,7 +33,11 @@ const Repos = () => {
   if (!repos && isLoading) return <Loader />
 
   return (
-    <div className={styles.container}>
+    <motion.div 
+    initial={{ opacity: 0, scale: 0.5 }}
+    animate={{ opacity: 1, scale: 1 }}
+    transition={{ duration: 0.5 }}
+    className={styles.container}>
       <Backbutton />
       <h2>Veja os Repositórios de <span>{username}</span></h2>
       {repos && repos.length === 0 && <p>Não há repositórios.</p>}
@@ -43,7 +48,7 @@ const Repos = () => {
           ))}
         </div>
       )}
-    </div>
+    </motion.div>
   )
 }
 
