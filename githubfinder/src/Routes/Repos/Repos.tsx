@@ -3,6 +3,7 @@ import { useState, useEffect } from 'react'
 import { useParams } from 'react-router-dom'
 import { RepoProps } from "../../Types/reposit"
 import styles from '../Repos/Repos.module.css'
+import Backbutton from "../../Components/BackButton/Backbutton"
 
 const Repos = () => {
 
@@ -29,6 +30,7 @@ const Repos = () => {
 
   return (
     <div className={styles.container}>
+      <Backbutton />
       <h2>Veja os Repositórios de <span>{username}</span></h2>
       {repos && repos.length === 0 && <p>Não há repositórios.</p>}
       {repos && repos.length > 0 && (

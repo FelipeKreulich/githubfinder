@@ -1,0 +1,21 @@
+.container {
+  display: flex;
+  justify-content: left;
+  margin-bottom: 1.4rem;
+}
+
+.back_btn {
+  width: 5rem;
+  padding: 5px;
+  border: none;
+  border-radius: 5px;
+  text-align: center;
+  background-color: #646aff;
+  opacity: 0.8;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.back_btn:hover {
+  opacity: 1;
+}
