@@ -4,6 +4,7 @@ import { useParams } from 'react-router-dom'
 import { RepoProps } from "../../Types/reposit"
 import styles from '../Repos/Repos.module.css'
 import Backbutton from "../../Components/BackButton/Backbutton"
+import Loader from "../../Components/Loader/Loader"
 
 const Repos = () => {
 
@@ -27,6 +28,8 @@ const Repos = () => {
       loadRepos(username)
     }
   }, [])
+
+  if (!repos && isLoading) return <Loader />
 
   return (
     <div className={styles.container}>

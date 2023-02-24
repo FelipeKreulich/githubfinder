@@ -6,6 +6,7 @@ function App() {
     <div className={styles.app}>
       <h1>Github Finder</h1>
       <Outlet />
+      <p>By @FelipeKreulich - 2023</p>
     </div>
   )
 }
